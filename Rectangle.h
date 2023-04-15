@@ -2,9 +2,11 @@ struct Rectangle {
     float width, height;
     float x, y; //x and y coordinate
 
+    sf::Color color = sf::Color(255,255,255); //Default white
+
     sf::RectangleShape setShape();
 
-    Rectangle() {};
+    Rectangle() {}; //Default Constructor
 
     Rectangle(float width, float height, float x, float y)
     {
@@ -14,14 +16,18 @@ struct Rectangle {
         this->y = y;
     }
 
-    friend bool operator >(const Rectangle& lhs, const Rectangle& rhs)
+    friend bool operator >(const Rectangle& lhs, const Rectangle& rhs) // > operator overload
     {
         return lhs.height > rhs.height;
     }
 };
 
-sf::RectangleShape Rectangle::setShape()
+sf::RectangleShape Rectangle::setShape() //Sets the sf::RectangleShape object given this Rectangle.
 {
-    return sf::RectangleShape(sf::Vector2f(width, height)); 
+    sf::RectangleShape rect;
+    rect.setSize(sf::Vector2f(width, height));
+    rect.setFillColor(color);
+    rect.setPosition(x,y);
+    return rect;
 }
 
