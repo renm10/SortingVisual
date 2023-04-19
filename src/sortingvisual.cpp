@@ -25,6 +25,7 @@ int main()
     srand((unsigned) time(NULL)); //Seed for rand
 
     std::vector<Rectangle> rectarr; //Array of Rectangles
+    std::vector<Rectangle> rectarrcpy; // Copy of array of rectangles (Used for quit)
 
     int x_off = 0; //x offset as we populate the rectangles x position
     for (int i = 0; i < arr_size; i++)
@@ -53,12 +54,19 @@ int main()
             {
                 start = true;
             }
+            if ((event.type == sf::Event::KeyReleased) && (event.key.code ==  sf::Keyboard::Q)) //Quit
+            {
+                window.close();
+            }
+
         }
 
         if (start)
         {
-           bubbleSort(rectarr, window);
-           start = false;
+            std::cout << "Sorting" << std::endl;
+            bubbleSort(rectarr, window);
+            std::cout << "Sorted" << std::endl;
+            start = false;
         }
 
         if (isSorted(rectarr))

@@ -5,7 +5,7 @@ A bubble sort visualizer created by C++ and [SFML](https://www.sfml-dev.org/inde
 ## Follow Steps
 1. Compiling
 ```
-g++ -I<Destination of SFML>\include -c sortingvisual.cpp -o sortingvisual.o
+g++ -I<Destination of SFML>\include -c ./src/sortingvisual.cpp -o sortingvisual.o
 ```
 2. Linking
 ```
@@ -20,4 +20,5 @@ g++ -L<Destination of SFML>\lib .\sortingvisual.o -o sortingvisual.exe -lmingw32
 ```
 
 ## Usage
-Press the space bar to begin the algorithm.
+Space Bar: Start the Algorithm
+Q : Quit (Close window)
