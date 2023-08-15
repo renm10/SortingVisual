@@ -19,6 +19,12 @@ g++ -L<Destination of SFML>\lib .\sortingvisual.o -o sortingvisual.exe -lmingw32
 .\sortingvisual.exe
 ```
 
+## Requirements
+SFML
+
 ## Usage
-Space Bar: Start the Algorithm
+Space Bar: Start the Algorithm   
 Q : Quit (Close window)
+
+## Demo
+![SortingVisual-gif](https://github.com/renm10/SortingVisual/assets/43124584/1a27f36b-b19e-408a-b1ce-48c7f48c6966)
