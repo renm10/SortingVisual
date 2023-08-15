@@ -27,6 +27,8 @@ sf::RectangleShape Rectangle::setShape() //Sets the sf::RectangleShape object gi
     sf::RectangleShape rect;
     rect.setSize(sf::Vector2f(width, height));
     rect.setFillColor(color);
+    rect.setOutlineThickness(1);
+    rect.setOutlineColor(sf::Color(0,0,0));
     rect.setPosition(x,y);
     return rect;
 }

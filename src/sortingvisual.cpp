@@ -17,7 +17,7 @@ int ground = WIND_HEIGHT - 1; //Y coordinate of the very bottom of the window
 
 int main()
 {
-    int arr_size = 200; //Size of the array
+    int arr_size = 50; //Size of the array
 
     sf::RenderWindow window(sf::VideoMode(WIND_WIDTH, WIND_HEIGHT), "Sorting Visual");
 
@@ -31,7 +31,7 @@ int main()
     for (int i = 0; i < arr_size; i++)
     {
         float random = 1 + (rand() % WIND_HEIGHT); //Random number between 1 and the window height
-        Rectangle temprect((WIND_WIDTH / arr_size), random, x_off, ground - random); 
+        Rectangle temprect((WIND_WIDTH / arr_size) - 1, random, x_off, ground - random); //-1 for width to account for border outline
         rectarr.push_back(temprect);
         x_off += (WIND_WIDTH / arr_size); //Move offset
     }
@@ -102,7 +102,7 @@ void swap(Rectangle& lhs, Rectangle& rhs)
     lhs.color = sf::Color(255,255,255);
     rhs.color = sf::Color(255,255,255);
 
-    sf::sleep(sf::milliseconds(3));
+    sf::sleep(sf::milliseconds(10));
 }
 
 /*Draws all rectangles to the window*/
