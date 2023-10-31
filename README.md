@@ -27,4 +27,4 @@ Space Bar: Start the Algorithm
 Q : Quit (Close window)
 
 ## Demo
-![SortingVisual-gif](https://github.com/renm10/SortingVisual/assets/43124584/1a27f36b-b19e-408a-b1ce-48c7f48c6966)
+![SortingVisual-gif](https://github.com/renm10/SortingVisual/assets/43124584/b9947522-4a83-4067-8234-410b481bc954)
